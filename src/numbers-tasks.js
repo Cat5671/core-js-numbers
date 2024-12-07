@@ -1,12 +1,3 @@
-/* *******************************************************************************************
- *                                                                                           *
- * Please read the following tutorial before implementing tasks:                              *
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates           *
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number   *
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math     *
- *                                                                                           *
- ******************************************************************************************* */
-
 function getRectangleArea(width, height) {
   return width * height;
 }
@@ -23,18 +14,6 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
   return Math.sqrt(Math.pow((Math.max(x1, x2) - Math.min(x1, x2)), 2) + Math.pow((Math.max(y1, y2) - Math.min(y1, y2)), 2));
 }
 
-/**
- * Returns a root of linear equation a*x + b = 0 given by coefficients a and b.
- *
- * @param {number} a
- * @param {number} b
- * @return {number}
- *
- * @example:
- *   5*x - 10 = 0    => 2
- *   x + 8 = 0       => -8
- *   5*x = 0         => 0
- */
 function getLinearEquationRoot(a, b) {
   return ((-1) * b) / a;
 }
@@ -73,8 +52,8 @@ function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
  *     5     => 5
  *     0     => 0
  */
-function getLastDigit(/* value */) {
-  throw new Error('Not implemented');
+function getLastDigit(value) {
+  return value % 10;
 }
 
 /**
