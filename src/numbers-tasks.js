@@ -1,26 +1,21 @@
 function getRectangleArea(width, height) {
-    'use strict';
-    return width * height;
+  return width * height;
 }
 
 function getCircleCircumference(radius) {
-    'use strict';
-    return radius * 2 * Math.PI;
+  return radius * 2 * Math.PI;
 }
 
 function getAverage(value1, value2) {
-    'use strict';
-    return (value1 + value2) / 2;
+  return (value1 + value2) / 2;
 }
 
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-    'use strict';
-    return Math.sqrt(Math.pow((Math.max(x1, x2) - Math.min(x1, x2)), 2) + Math.pow((Math.max(y1, y2) - Math.min(y1, y2)), 2));
+  return Math.sqrt(Math.pow((Math.max(x1, x2) - Math.min(x1, x2)), 2) + Math.pow((Math.max(y1, y2) - Math.min(y1, y2)), 2));
 }
 
 function getLinearEquationRoot(a, b) {
-    'use strict';
-    return ((-1) * b) / a;
+  return ((-1) * b) / a;
 }
 
 /**
