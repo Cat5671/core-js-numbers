@@ -7,15 +7,19 @@ function getCircleCircumference(radius) {
 }
 
 function getAverage(value1, value2) {
-  return (value1 + value2) / 2;
+  const result = (value1 + value2) / 2;
+  if (result === Number.POSITIVE_INFINITY) return Number.MAX_VALUE;
+  if (result === Number.NEGATIVE_INFINITY) return Number.MIN_VALUE;
+
+  return result;
 }
 
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-  return Math.sqrt(Math.pow((Math.max(x1, x2) - Math.min(x1, x2)), 2) + Math.pow((Math.max(y1, y2) - Math.min(y1, y2)), 2));
+  return Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
 }
 
 function getLinearEquationRoot(a, b) {
-  return ((-1) * b) / a;
+  return -b / a;
 }
 
 /**
@@ -67,8 +71,8 @@ function getLastDigit(value) {
  *     '37'     => 37
  * '-525.5'     => -525.5
  */
-function parseNumberFromString(/* value */) {
-  throw new Error('Not implemented');
+function parseNumberFromString(value) {
+  return +value;
 }
 
 /**
@@ -84,8 +88,8 @@ function parseNumberFromString(/* value */) {
  *   3,3,3   => 5.196152422706632
  *   1,2,3   => 3.741657386773941
  */
-function getParallelepipedDiagonal(/* a, b, c */) {
-  throw new Error('Not implemented');
+function getParallelepipedDiagonal(a, b, c) {
+  return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
 }
 
 /**
