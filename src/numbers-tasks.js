@@ -25,7 +25,7 @@ function getLinearEquationRoot(a, b) {
 function getAngleBetweenVectors(x1, y1, x2, y2) {
   const scalarProduct = x1 * x2 + y1 * y2;
   const length1 = Math.sqrt(x1 ** 2 + y1 ** 2) * Math.sqrt(x2 ** 2 + y2 ** 2);
-  return scalarProduct / length1;
+  return Math.acos(scalarProduct / length1);
 }
 
 function getLastDigit(value) {
@@ -40,46 +40,17 @@ function getParallelepipedDiagonal(a, b, c) {
   return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
 }
 
-/**
- * Returns the number rounded to specified power of 10.
- *
- * @param {number} num
- * @param {number} pow
- * @return {number}
- *
- * @example:
- *   1234, 0  => 1234
- *   1234, 1  => 1230
- *   1234, 2  => 1200
- *   1234, 3  => 1000
- *   1678, 0  => 1678
- *   1678, 1  => 1680
- *   1678, 2  => 1700
- *   1678, 3  => 2000
- */
-function roundToPowerOfTen(/* num, pow */) {
-  throw new Error('Not implemented');
+function roundToPowerOfTen(num, pow) {
+  const power = 10 ** pow;
+  return Math.round(power / num) * power;
 }
 
-/**
- * Returns true is the number is prime; otherwise false.
- * See: https://en.wikipedia.org/wiki/Primality_test
- *
- * @param {number} n
- * @return {bool}
- *
- * @example:
- *   4 => false
- *   5 => true
- *   6 => false
- *   7 => true
- *   11 => true
- *   12 => false
- *   16 => false
- *   17 => true
- */
-function isPrime(/* n */) {
-  throw new Error('Not implemented');
+function isPrime(n) {
+  const d = Math.round(Math.sqrt(n));
+  for (let i = 2; i <= d; i += 1) {
+    if (n % i === 0) return false;
+  }
+  return true;
 }
 
 /**
