@@ -198,7 +198,7 @@ function getFibonacciNumber(/* index */) {
  */
 function getSumToN(n) {
   let result = 0;
-  for (let i = 0; i <= n; ++i) result += i;
+  for (let i = 0; i <= n; i += 1) result += i;
   return result;
 }
 
