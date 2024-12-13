@@ -42,7 +42,7 @@ function getParallelepipedDiagonal(a, b, c) {
 
 function roundToPowerOfTen(num, pow) {
   const power = 10 ** pow;
-  return Math.round(power / num) * power;
+  return Math.round(num / power) * power;
 }
 
 function isPrime(n) {
@@ -53,36 +53,10 @@ function isPrime(n) {
   return true;
 }
 
-/**
- * Tries to convert value to number and returns it if conversion was successful;
- * otherwise returns default value passed as a second argument.
- *
- * @param {any} value
- * @param {any} def
- * @return {number}
- *
- * @example
- *   toNumber(null, 0) => 0
- *   toNumber('test', 0) => 0
- *   toNumber('1', 0) => 1
- *   toNumber(42, 0) => 42
- *   toNumber(new Number(42), 0) => 42
- */
-function toNumber(/* value, def */) {
-  throw new Error('Not implemented');
+function toNumber(value, def) {
+  return +value ? +value : def;
 }
 
-/**
- * Returns the cube of the given number.
- *
- * @param {number} num
- * @return {number}
- *
- * @example:
- *   3  => 27
- *   -2 => -8
- *   0  => 0
- */
 function getCube(num) {
   return num ** 3;
 }
@@ -124,19 +98,8 @@ function getSine(num) {
   return Math.sin(num);
 }
 
-/**
- * Returns a string representation of a number in a specified base (radix).
- *
- * @param {number} number
- * @param {number} base
- * @return {string}
- *
- * @example:
- * 255, 16 => 'ff'
- * 2, 2    => '10'
- */
-function numberToStringInBase(/* number, base */) {
-  throw new Error('Not implemented');
+function numberToStringInBase(number, base) {
+  return number.toString(base);
 }
 
 /**
