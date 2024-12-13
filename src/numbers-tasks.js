@@ -129,7 +129,7 @@ function getNumberValue(number) {
 }
 
 function isNumber(number) {
-  return typeof number === 'number' || number instanceof Number;
+  return Number.isFinite(number);
 }
 
 function isInteger(number) {
