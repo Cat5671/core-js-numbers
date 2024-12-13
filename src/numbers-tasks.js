@@ -214,7 +214,8 @@ function getSumToN(n) {
  *   5   => 5  // 5
  */
 function getSumOfDigits(num) {
-  return num.toString().split('').
+  return String(num).
+    split('').
   reduce((sum, nextNum) => +sum + +nextNum, 0);
 }
 
