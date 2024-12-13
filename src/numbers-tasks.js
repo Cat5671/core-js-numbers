@@ -198,7 +198,7 @@ function getFibonacciNumber(/* index */) {
  */
 function getSumToN(n) {
   let result = 0;
-  for (let i = 0; i <= n; i += 1) result += i;
+  for (let i = 0; i <= n; ++i) result += i;
   return result;
 }
 
@@ -216,7 +216,7 @@ function getSumToN(n) {
 function getSumOfDigits(num) {
   return String(num)
     .split('')
-    .reduce((acc, curr) => (+acc) + (+curr), 0);
+    .reduce((sum, currNum) => (+sum) + (+currNum), 0);
 }
 
 /**
@@ -245,7 +245,7 @@ function isPowerOfTwo(num) {
  *   Math.PI / 2 => 1
  */
 function getSine(num) {
-  return num.sin(num);
+  return Math.sin(num);
 }
 
 /**
