@@ -216,7 +216,7 @@ function getSumToN(n) {
 function getSumOfDigits(num) {
   return String(num)
     .split('')
-    .reduce((acc, curr) => +acc + +curr, 0);
+    .reduce((sum, curr) => (+sum) + (+curr), 0);
 }
 
 /**
