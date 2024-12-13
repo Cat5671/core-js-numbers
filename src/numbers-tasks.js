@@ -197,9 +197,9 @@ function getFibonacciNumber(/* index */) {
  *   1  => 1
  */
 function getSumToN(n) {
-  let result = 0;
-  for (let i = 0; i <= n; i += 1) result += i;
-  return result;
+  let sum = 0;
+  for (let i = 0; i <= n; ++i) sum += i;
+  return sum;
 }
 
 /**
@@ -216,7 +216,7 @@ function getSumToN(n) {
 function getSumOfDigits(num) {
   return String(num)
     .split('')
-    .reduce((acc, curr) => +acc + +curr, 0);
+    .reduce((sum, currNum) => +sum + +currNum, 0);
 }
 
 /**
