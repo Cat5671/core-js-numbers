@@ -22,72 +22,18 @@ function getLinearEquationRoot(a, b) {
   return -b / a;
 }
 
-/**
- * Returns an angle (in radians) between two vectors given by xi and yi,
- * coordinates in Cartesian plane.
- * See details https://en.wikipedia.org/wiki/Euclidean_vector#Representations
- *
- * @param {number} x1
- * @param {number} y1
- * @param {number} x2
- * @param {number} y2
- * @return {number}
- *
- * @example:
- *   (1,0) (0,1)     => π/2
- *   (0,1) (0,-1)    => π
- *   (0,-1) (1,0)    => π/2
- *   (0,1) (0,1)     => 0
- */
-function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
-  throw new Error('Not implemented');
+function getAngleBetweenVectors(x1, y1, x2, y2) {
+  return (x1 * x2 + y1 * y2) / Math.sqrt(x1 ** 2 + y1 ** 2) / Math.sqrt(x2 ** 2 + y2 ** 2);
 }
 
-/**
- * Returns a last digit of a integer number.
- * The input parameter will always be greater than or equal to zero and will be in decimal notation.
- *
- * @param {number} value
- * @return {number}
- *
- * @example:
- *   100     => 0
- *    37     => 7
- *     5     => 5
- *     0     => 0
- */
 function getLastDigit(value) {
   return value % 10;
 }
 
-/**
- * Returns a number by given string representation.
- *
- * @param {string} value
- * @return {number}
- *
- * @example:
- *    '100'     => 100
- *     '37'     => 37
- * '-525.5'     => -525.5
- */
 function parseNumberFromString(value) {
   return +value;
 }
 
-/**
- * Returns a diagonal length of the rectangular parallelepiped given by its sides a,b,c.
- *
- * @param {number} a
- * @param {number} b
- * @param {number} c
- * @return {number}
- *
- * @example:
- *   1,1,1   => 1.7320508075688772
- *   3,3,3   => 5.196152422706632
- *   1,2,3   => 3.741657386773941
- */
 function getParallelepipedDiagonal(a, b, c) {
   return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
 }
@@ -185,65 +131,22 @@ function getFibonacciNumber(/* index */) {
   throw new Error('Not implemented');
 }
 
-/**
- * Returns the sum of all numbers from 1 to n.
- *
- * @param {number} n
- * @return {number}
- *
- * @example:
- *   5  => 15 // (1+2+3+4+5)
- *   10 => 55 // (1+2+3+...+10)
- *   1  => 1
- */
 function getSumToN(n) {
   let sum = 0;
   for (let i = 0; i <= n; i += 1) sum += i;
   return sum;
 }
 
-/**
- * Returns the sum of the digits of a given number.
- *
- * @param {number} num
- * @return {number}
- *
- * @example:
- *   123 => 6  // (1+2+3)
- *   202 => 4  // (2+0+2)
- *   5   => 5  // 5
- */
 function getSumOfDigits(num) {
   return String(num)
     .split('')
     .reduce((sum, currNum) => +sum + +currNum, 0);
 }
 
-/**
- * Returns true if the given number is a power of two, false otherwise.
- *
- * @param {number} num
- * @return {boolean}
- *
- * @example:
- *   4   => true
- *   16  => true
- *   15  => false
- */
 function isPowerOfTwo(num) {
   return Number.isInteger(Math.log2(num));
 }
 
-/**
- * Returns the sine of a number.
- *
- * @param {number} num
- * @return {number}
- *
- * @example:
- *   0 => 0
- *   Math.PI / 2 => 1
- */
 function getSine(num) {
   return Math.sin(num);
 }
